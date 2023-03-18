@@ -9,6 +9,7 @@ const { title, description, pubDate } = Astro.props;
 
 <BaseLayout pageTitle={description}>
   <main class="content-wrapper">
+    <a href="/blog">{"<- all posts"}</a>
     <article class="blog-post">
       <FormattedDate date={pubDate} />
       <h1>{title}</h1>
@@ -17,3 +18,13 @@ const { title, description, pubDate } = Astro.props;
     </article>
   </main>
 </BaseLayout>
+
+<style lang="scss">
+  main {
+    padding: 4rem 0;
+
+    article {
+      margin-top: 2rem;
+    }
+  }
+</style>
