@@ -79,6 +79,12 @@ h6 {
   isolation: isolate;
 }
 
-.main-content {
+.main-wrapper {
   flex-grow: 1;
+}
+
+.content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
