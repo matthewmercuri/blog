@@ -1,3 +1,10 @@
+---
+title: 'Why I am Learning C (as a Web Developer)'
+decription: 'My accounting of why I decided to learn C, despite being a web developer.'
+pubDate: 'Mar 18 2023'
+isDraft: true
+---
+
 # Why I am learning C (as a web developer)
 
 For a web developer, learning C may seem like a low-return endevour. Though, I have a suspicion that may not be true. What follows is my best effort in justifying my decision to learn C. After careful thought, I can distil my rationale into philosophical, intellectual, and practical buckets.
