@@ -76,3 +76,9 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+.page-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
