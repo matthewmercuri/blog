@@ -1,6 +1,6 @@
 ---
 title: 'Why I am Learning C (as a Web Developer)'
-decription: 'My accounting of why I decided to learn C, despite being a web developer.'
+description: 'My accounting of why I decided to learn C, despite being a web developer.'
 pubDate: 'Mar 18 2023'
 isDraft: true
 ---
