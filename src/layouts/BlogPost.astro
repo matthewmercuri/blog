@@ -9,7 +9,7 @@ const { title, description, pubDate } = Astro.props;
 
 <BaseLayout pageTitle={description}>
   <main class="content-wrapper">
-    <article>
+    <article class="blog-post">
       <FormattedDate date={pubDate} />
       <h1>{title}</h1>
       <hr />
