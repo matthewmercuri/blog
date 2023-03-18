@@ -7,6 +7,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   pageTitle="Blog"
   description="Index of Matthew Mercuri's blog posts."
 >
-  <h1>Blog</h1>
-  <PostList />
+  <main class="content-wrapper">
+    <PostList />
+  </main>
 </BaseLayout>
+
+<style lang="scss">
+  main {
+    margin-top: 3rem;
+  }
+</style>
