@@ -3,13 +3,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../constants";
 import "../styles/global.css";
 
 export type Props = {
-    title?: string;
+    pageTitle?: string;
     description?: string;
 };
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
-const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+const generateTitle = (pageTitle?: string) =>
+    pageTitle ? `${SITE_TITLE} | ${pageTitle}` : SITE_TITLE;
+
+const { pageTitle, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -22,6 +25,6 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 <link rel="canonical" href={canonicalUrl} />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
+<title>{generateTitle(pageTitle)}</title>
+<meta name="title" content={generateTitle(pageTitle)} />
 <meta name="description" content={description} />
