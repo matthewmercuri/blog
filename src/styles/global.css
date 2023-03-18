@@ -14,6 +14,13 @@
   font-display: swap;
 }
 
+:root {
+  --primary-bg: #212121;
+  --primary-text: #f4f4f4;
+  --accent-light-blue: #4BB3FD;
+  --accent-dark-blue: #00487C;
+}
+
 /* https://www.joshwcomeau.com/css/custom-css-reset/ */
 
 *,
@@ -35,6 +42,8 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Montserrat', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
 }
 
 img,
