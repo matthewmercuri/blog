@@ -1,5 +1,26 @@
 .blog-post {
-  h2 {
-    background-color: red;
+  padding: 4rem 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  hr {
+    margin: 1.5rem 0;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+
+  li {
+    margin: 0.5rem 0;
   }
 }
