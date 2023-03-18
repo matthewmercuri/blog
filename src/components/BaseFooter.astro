@@ -3,7 +3,46 @@ import GitHubIcon from "../../public/social-icons/github.svg";
 import LinkedInIcon from "../../public/social-icons/linkedin.svg";
 ---
 
-<footer>
-  <a><img src={GitHubIcon} /></a>
-  <a><img src={LinkedInIcon} /></a>
+<footer class="footer">
+  <div class="footer__socials">
+    <a href="https://github.com/matthewmercuri">
+      <img src={GitHubIcon} alt="clickable icon to visit my github profile" />
+    </a>
+    <a href="https://www.linkedin.com/in/matthew-mercuri/">
+      <img
+        src={LinkedInIcon}
+        alt="clickable icon to visit my linked in profile"
+      />
+    </a>
+  </div>
+  <p class="footer__copy">&copy; 2023 Matthew Mercuri</p>
 </footer>
+
+<style lang="scss">
+  .footer {
+    width: 100%;
+    background-color: var(--accent-dark-blue);
+    padding: 0.5rem 0;
+
+    &__socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      a {
+        margin-right: 1rem;
+      }
+    }
+
+    &__copy {
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+  }
+</style>
