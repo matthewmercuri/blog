@@ -37,4 +37,4 @@ With the context built above, here are the "wins" I hope to have by learning C:
 - I develop an appreciation for the abstraction provided by JavaScript and Python
 - I gain an escape-hatch if I need to write truly performant code
 
-The time seems right for me to make the jump. I have been using TypeScript for a while, and I have gotten used to typing things. I was also an early adopter in Python type-hints. I don't think that provides a sturdy foundation, but it is a foundation nonetheless. I hope this post proves useful to people that find themselves with similar thoughts.
+The time seems right for me to make the jump. I have been using TypeScript for a while, and I have gotten used to typing things. I was also an early adopter of Python type-hints. I don't think that provides a sturdy foundation, but it is a foundation nonetheless. I hope this post proves useful to people that find themselves with similar thoughts.
