@@ -1,16 +1,12 @@
 ---
 export type Props = {
   date: Date;
-  isSmallText?: boolean;
 };
 
-const { date, isSmallText } = Astro.props;
+const { date } = Astro.props;
 ---
 
-<time
-  class:list={["formatted-date", { "formatted-date--small": isSmallText }]}
-  datetime={date.toISOString()}
->
+<time class="formatted-date" datetime={date.toISOString()}>
   {
     date.toLocaleDateString("en-us", {
       year: "numeric",
@@ -23,9 +19,12 @@ const { date, isSmallText } = Astro.props;
 <style lang="scss">
   .formatted-date {
     color: var(--accent-light-blue);
+    font-size: 0.75rem;
+  }
 
-    &--small {
-      font-size: 0.75rem;
+  @media only screen and (min-width: 48em) {
+    .formatted-date {
+      font-size: 1rem;
     }
   }
 </style>
