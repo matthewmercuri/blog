@@ -12,7 +12,7 @@ const posts = (await getCollection("blog")).sort(
   {
     posts.map((post) => (
       <li class="post-list__post">
-        <FormattedDate date={post.data.pubDate} />
+        <FormattedDate date={post.data.pubDate} isSmallText />
         <a class="post-list__post__title" href={`/blog/${post.slug}`}>
           {post.data.title}
         </a>
