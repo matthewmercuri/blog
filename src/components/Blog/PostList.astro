@@ -11,9 +11,15 @@ const posts = (await getCollection("blog")).sort(
   <h3>Posts</h3>
   {
     posts.map((post) => (
-      <li>
+      <li class="post-list__post">
         <FormattedDate date={post.data.pubDate} />
-        <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+        <a class="post-list__post__title" href={`/blog/${post.slug}`}>
+          {post.data.title}
+        </a>
+        <p class="post-list__post__description">{post.data.description}</p>
+        <a class="post-list__post__read-more" href={`/blog/${post.slug}`}>
+          read more
+        </a>
       </li>
     ))
   }
@@ -26,14 +32,34 @@ const posts = (await getCollection("blog")).sort(
     margin-bottom: 1rem;
   }
 
-  li {
-    a {
-      margin-left: 0.5rem;
-      font-size: 1.5rem;
-      text-decoration: underline;
+  .post-list {
+    &__post {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
 
-      &:hover {
-        color: var(--accent-light-blue);
+      &__title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: underline;
+
+        &:hover {
+          color: var(--accent-light-blue);
+        }
+      }
+
+      &__description {
+        font-size: 1.25rem;
+        margin-top: 0.5rem;
+        color: var(--secondary-text);
+      }
+
+      &__read-more {
+        margin-top: 0.5rem;
+
+        &:hover {
+          color: var(--accent-light-blue);
+        }
       }
     }
   }
