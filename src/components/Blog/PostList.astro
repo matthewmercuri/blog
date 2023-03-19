@@ -9,20 +9,22 @@ const posts = (await getCollection("blog")).sort(
 
 <>
   <h3>Posts</h3>
-  {
-    posts.map((post) => (
-      <li class="post-list__post">
-        <FormattedDate date={post.data.pubDate} />
-        <a class="post-list__post__title" href={`/blog/${post.slug}`}>
-          {post.data.title}
-        </a>
-        <p class="post-list__post__description">{post.data.description}</p>
-        <a class="post-list__post__read-more" href={`/blog/${post.slug}`}>
-          read more
-        </a>
-      </li>
-    ))
-  }
+  <ul>
+    {
+      posts.map((post) => (
+        <li class="post-list__post">
+          <FormattedDate date={post.data.pubDate} />
+          <a class="post-list__post__title" href={`/blog/${post.slug}`}>
+            {post.data.title}
+          </a>
+          <p class="post-list__post__description">{post.data.description}</p>
+          <a class="post-list__post__read-more" href={`/blog/${post.slug}`}>
+            read more
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </>
 
 <style lang="scss">
@@ -30,6 +32,12 @@ const posts = (await getCollection("blog")).sort(
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .post-list {
