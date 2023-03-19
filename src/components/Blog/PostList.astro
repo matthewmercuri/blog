@@ -39,8 +39,8 @@ const posts = (await getCollection("blog")).sort(
       margin-bottom: 2rem;
 
       &__title {
+        margin-top: 0.5rem;
         font-weight: bold;
-        font-size: 1.5rem;
         text-decoration: underline;
 
         &:hover {
@@ -49,12 +49,11 @@ const posts = (await getCollection("blog")).sort(
       }
 
       &__description {
-        font-size: 1.25rem;
-        margin-top: 0.5rem;
         color: var(--secondary-text);
       }
 
       &__read-more {
+        font-size: 0.75rem;
         margin-top: 0.5rem;
 
         &:hover {
