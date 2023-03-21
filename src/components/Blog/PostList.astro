@@ -3,9 +3,9 @@ import FormattedDate from "../Blog/FormattedDate.astro";
 import { getCollection } from "astro:content";
 import { isDev } from "../../constants";
 
-const posts = (await getCollection("blog"))
-  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
-  .filter((post) => (isDev ? true : !post.data.isDraft));
+const posts = (
+  await getCollection("blog", ({ data }) => (isDev ? true : !data.isDraft))
+).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
 <>
